@@ -1,0 +1,9 @@
+<h1>Restaurants list:</h1>
+
+<ul>
+  <% @restaurants.each do |restaurant| %>
+    <li><%= link_to restaurant.name.capitalize, restaurant_path(restaurant) %></li>
+  <% end %>
+</ul>
+
+<p><%= link_to '👉 Ajouter un Restaurant 👈', restaurants_new_path %></p>
